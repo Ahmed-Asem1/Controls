@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 92.4vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(45deg, #808080,#c0c0c0cc);
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+table {
+  margin: 50px auto 20px auto;
+  width: 50%;
+  border: 1px solid #ffefd545;
+  border-collapse: collapse;
+}
+table td {
+  padding: 10px;
+  text-align: center;
+  color: rebeccapurple;
+  font-weight: bold;
+}
+table thead tr{
+  background: rgba(0,0,0,0.2);
+}
+table tr td{
+  border: 1px solid rgba(0,0,0,0.2);
+  color: black;
+}
+table tbody tr{
+  background:  rgba(0,0,0,0.08);
+}
+table tbody tr:hover{
+  background: rgba(0,0,0,0.0);
+  cursor: pointer;
+}
+table tbody tr:hover td{
+  color: #d7d7e2c4;
+  font-weight: 700;
+}
+.componant {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+}
+.control{
+  position: relative;
+}
+.control .select-menu{
+  display: flex;
+  align-items: center;
+  border: 1px solid #c0bcb5;
+  padding: 5px;
+  border-radius: 5px;
+}
+.control .select-menu h5 {
+  cursor: pointer;
+}
+.control .select-menu i{
+  font-size: 21px;
+  color: #3f3f3f;
+  transition: 0.5s;
+  cursor: pointer;
+}
+/* Rotate icon by js */
+.control .select-menu i.rotate{
+  transform: rotate(-90deg);
+}
+.control ul {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 100px;
+  border: 1px solid #f5f5dc47;
+  opacity: 0;
+  transition: 0.5s;
+}
+.select-menu select{
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ffffff66;
+}
+.select-menu select option{
+  background-color: #c0bcb5;
+}
+
+.page-number {
+  display: flex;
+  flex-direction: row-reverse;
+  width: fit-content;
+  align-items: center;
+}
+.hidden{
+  display: none;
+}
+.disabled{
+  color: #3d383878;
+  font-size: 21px;
+}
+.page-number i:not(.disabled){
+  cursor: pointer;
+  color: #3d3838e8;
+  font-size: 21px;
+}
+.pagination-numbers{
+
+}
+.pagination-numbers .pagination-button{
+  width: 22px;
+  height: 22px;
+  padding: 2px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #ffffff66;
+}
+.pagination-numbers .pagination-button:not(:last-child){
+  margin-right: 6px;
+}
+.pagination-numbers .pagination-button:hover{
+  background-color: #3f3f3f13;
+}
+.pagination-numbers .pagination-button.active{
+  background-color: dimgray;
+  color: white;
+}
